@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 89b96f3cc4aa28a47a169a124eff333f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bricemont
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c44e05486af5a584a82f52aa1699c9b0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
