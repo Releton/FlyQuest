@@ -12,6 +12,8 @@ TagManager:
   - Door3
   - Door
   - PlayerObject
+  - GreenVig
+  - RedVig
   layers:
   - Default
   - TransparentFX
