@@ -19,11 +19,12 @@ public class QuestionSelector
 
     private int generateRandomNumber(int range)
     {
-        Debug.Log(mode);
-        int r = Random.Range(0, range);
+        if (range <= 1) return 0;
+
+        int r = Random.Range(0, (int) Mathf.Round((range * 100)/100f));
         for(; r == Spawner.firstIndexAnswer;)
         {
-            r = Random.Range(0, range);
+            r = Random.Range(0, (int)Mathf.Round((range * 100) / 100f));
         }
         Spawner.firstIndexAnswer = r;
         return r;

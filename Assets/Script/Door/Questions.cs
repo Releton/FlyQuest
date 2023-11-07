@@ -14,13 +14,10 @@ public class Questions
     {
         new Question("What is 100/3", new string[] {"33.3", "40"}, 0 ,1),
         new Question("What is 10/3", new string[] {"3.3", "4"}, 0 ,1),
-
-
     };
 
     public static Question[] maHdQ =
     {
         new Question("What is 2*sin(90)", new string[] {"2", "0"}, 0 ,2),
     };
-
 }
