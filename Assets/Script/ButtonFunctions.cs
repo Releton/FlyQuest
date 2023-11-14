@@ -7,32 +7,6 @@ public class ButtonFunctions : MonoBehaviour
 {
     public void OnMathsClick()
     {
-        QuestionSelector.mode = "maths";
-        ChangeScene();
-    }
-    public void OnChemistryClick()
-    {
-        QuestionSelector.mode = "chemistry";
-        ChangeScene();
-    }
-    public void OnPhyscisClick()
-    {
-        QuestionSelector.mode = "physics";
-        ChangeScene();
-    }
-    public void OnBiologyClick()
-    {
-        QuestionSelector.mode = "biology";
-        ChangeScene();
-    }
-    public void OnComputerClick()
-    {
-        QuestionSelector.mode = "computer";
-        ChangeScene();
-    }
-    public void OnMixedClick()
-    {
-        QuestionSelector.mode = "mixed";
         ChangeScene();
     }
 

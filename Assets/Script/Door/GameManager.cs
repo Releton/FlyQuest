@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    public ThirdPersonMovement player;
     // Start is called before the first frame update
     public GameObject[] doors;
     public static int spawnNumber = 0;
@@ -14,13 +15,15 @@ public class Spawner : MonoBehaviour
     private QuestionSelector qs;
     public TMP_Text QuestionText;
     public TMP_Text Points;
-    public TMP_Text Mode;
     public static int firstIndexAnswer = -1;
     public GameObject questionPanel;
     public TMP_Text questionZoomed;
     public static bool isQuestionZoomed = false;
     private Question quest;
     private int index;
+    private float spawnTimer = 0;
+    bool counting = false;
+    private float timeReq;
     // Update is called once per frame
     private void Start()
     {
@@ -30,25 +33,45 @@ public class Spawner : MonoBehaviour
         points = 0;
         life = 3;
         qs = new QuestionSelector();
-        Mode.text = QuestionSelector.mode;
     }
     void Update()
     {
+
+        if(counting)
+        {
+            spawnTimer += Time.deltaTime;
+        }
+        if(spawnTimer >=  timeReq && counting)
+        {
+            counting = false;   
+            IntstantiateDoor();
+            spawnTimer = 0;
+        }
+
         if (life <= 0)
         {
-            GameManager.isAlive = false;
+            HealthManager.isAlive = false;
         }
         Points.text = points.ToString();
-        if ((QuestionDetector.canSpawn || DoorMovement.canSpawn) && GameManager.isAlive && !PauseMenu.isPaused)
+        if ((EndDoorCollision.canSpawn || DoorManager.canSpawn) && HealthManager.isAlive && !PauseMenu.isPaused)
         {
             spawnNumberLocal++;
             spawnNumber++;
 
             DisplayQuestion();
-            QuestionDetector.canSpawn = false;
-            DoorMovement.canSpawn = false;
+            EndDoorCollision.canSpawn = false;
+            DoorManager.canSpawn = false;
         }
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            questionPanel.gameObject.SetActive(false);
+            DoorManager.canSpawn = false;
+            EndDoorCollision.canSpawn = false;
+            player.TeleportToStart();
+            isQuestionZoomed = false;
+            print("Herer");
+            spawnTimer = timeReq;
+        }
     }
 
     private void DisplayQuestion()
@@ -72,19 +95,20 @@ public class Spawner : MonoBehaviour
         {
             spawnNumberLocal = 0;
         }
-        Debug.Log("First "+quest.question);
-        questionZoomed.text = quest.question;
-        questionPanel.gameObject.SetActive(true);
-        isQuestionZoomed = true;
-        float computed = quest.question.Length * 0.1f;
-        Invoke("IntstantiateDoor", (index == 0) ? computed : (index == 1 ? (computed + 1) : computed + 2));
-    }
+            questionZoomed.text = quest.question;
+            questionPanel.gameObject.SetActive(true);
+            player.TeleportToStart();
+            isQuestionZoomed = true;
+            print("Herer SHH");
+        counting = true;
+        timeReq = (index == 0) ? 5 : (index == 1 ? (10) : 15);
+    } 
     private void IntstantiateDoor()
     {
         Instantiate(doors[index]);
         Question q = quest;
         QuestionText.text = q.question;
-        DoorMovement.question = q;
+        DoorManager.question = q;
         Debug.Log("Second "+q.question);
         questionPanel.gameObject.SetActive(false);
         isQuestionZoomed = false;

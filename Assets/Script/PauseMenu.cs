@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void forfiet()
     {
-        GameManager.isAlive = false;
+        HealthManager.isAlive = false;
     }
 
 

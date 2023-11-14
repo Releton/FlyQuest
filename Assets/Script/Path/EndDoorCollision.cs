@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestionDetector : MonoBehaviour
+public class EndDoorCollision : MonoBehaviour
 {
     public static bool canSpawn = true;
     private void Start()
@@ -13,7 +13,7 @@ public class QuestionDetector : MonoBehaviour
     {
         if (collision.gameObject.tag.Contains("Door"))
         {
-            Spawner.life--;
+            GameManager.life--;
             canSpawn = true;
             Destroy(collision.gameObject);
         }

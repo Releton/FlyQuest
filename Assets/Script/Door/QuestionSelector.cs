@@ -1,8 +1,6 @@
 using UnityEngine;
 public class QuestionSelector
 {
-    public static string mode;
-
     public Question getEzQuestion()
     {
         return Questions.maEzQ[generateRandomNumber(Questions.maEzQ.Length)];
@@ -22,11 +20,11 @@ public class QuestionSelector
         if (range <= 1) return 0;
 
         int r = Random.Range(0, (int) Mathf.Round((range * 100)/100f));
-        for(; r == Spawner.firstIndexAnswer;)
+        for(; r == GameManager.firstIndexAnswer;)
         {
             r = Random.Range(0, (int)Mathf.Round((range * 100) / 100f));
         }
-        Spawner.firstIndexAnswer = r;
+        GameManager.firstIndexAnswer = r;
         return r;
     }
 }

@@ -14,10 +14,11 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     Vector3 moveDir;
     bool isMoving = false;
+    public Vector3 initialPosition;
     private void Update()
     {
         isMoving = false;
-        if(GameManager.isAlive)
+        if(HealthManager.isAlive)
         {
             characterController.Move(new Vector3(0f, -gravity * gravityMultiplier * Time.deltaTime, 0f));
         }
@@ -25,7 +26,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-        if(direction.magnitude >= 0.1f && GameManager.isAlive && !Spawner.isQuestionZoomed)
+        if(direction.magnitude >= 0.1f && HealthManager.isAlive && !GameManager.isQuestionZoomed)
         {
             isMoving = true;
             float targetAnlge = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -38,5 +39,11 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             transform.position += transform.forward * Time.deltaTime * sprintSpeedMultiplier;
         }
+    }
+    
+
+    public void TeleportToStart()
+    {
+        transform.position = initialPosition;
     }
 }

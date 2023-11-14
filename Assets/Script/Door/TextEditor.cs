@@ -9,6 +9,7 @@ public class TextEditor : MonoBehaviour
     public TMP_Text Text;
     void Update()
     {
+        print(this.gameObject);
         Text.text = text;
     }
 }

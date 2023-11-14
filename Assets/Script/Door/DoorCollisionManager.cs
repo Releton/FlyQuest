@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class AnswerDetector : MonoBehaviour
+public class DoorCollisionManager : MonoBehaviour
 {
     public TMP_Text option;
     private int index;
@@ -13,17 +13,17 @@ public class AnswerDetector : MonoBehaviour
     }
     private void Update()
     {
-        if(DoorMovement.question!=null)
+        if(DoorManager.question!=null)
         {
-            option.text = DoorMovement.question.options[index];
+            option.text = DoorManager.question.options[index];
         }
     }
     private void OnTriggerExit(Collider collide)
     {
         if (collide.tag.Contains("Player"))
         {
-            DoorMovement.index = index;
-            DoorMovement.hasAnswered = true;
+            DoorManager.index = index;
+            DoorManager.hasAnswered = true;
         }
     }
 }

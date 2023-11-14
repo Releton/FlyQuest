@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerHeartRenderer : MonoBehaviour
 {
     public Image[] hearts;
     private void Update()
@@ -14,14 +14,14 @@ public class PlayerManager : MonoBehaviour
     {
         if(gameObject.transform.position.y < 0)
         {
-            GameManager.isAlive = false;
+            HealthManager.isAlive = false;
         }
     }
     private void renderHearts()
     {
         for(int i = 0; i < 3; i++)
         {
-            if(Spawner.life <= i || !GameManager.isAlive)
+            if(GameManager.life <= i || !HealthManager.isAlive)
             {
                 hearts[i].enabled= false;
             }

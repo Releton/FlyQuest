@@ -23,14 +23,13 @@ public class DeathScreen : MonoBehaviour
 
     private void Update()
     {
-        if(!GameManager.isAlive)
+        if(!HealthManager.isAlive)
         {
             pauseMenu.SetActive(false);
             deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             setHighScore();
             highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
-            mode.text = $"{QuestionSelector.mode}:  {Spawner.points}";
             if (!hasTriggeredOnce)
             {
                 audioManager.Play("Death");
@@ -48,16 +47,16 @@ public class DeathScreen : MonoBehaviour
     {
         PauseMenu.isPaused = false;
         pauseMenu.SetActive(false);
-        GameManager.isAlive = true;
+        HealthManager.isAlive = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     private void setHighScore()
     {
-        if(Spawner.points > PlayerPrefs.GetInt("HighScore", 0))
+        if(GameManager.points > PlayerPrefs.GetInt("HighScore", 0))
         {
-            PlayerPrefs.SetInt("HighScore", Spawner.points);
+            PlayerPrefs.SetInt("HighScore", GameManager.points);
         }
     }
 
@@ -65,7 +64,7 @@ public class DeathScreen : MonoBehaviour
     {
         PauseMenu.isPaused = false;
         pauseMenu.SetActive(false);
-        GameManager.isAlive = true;
+        HealthManager.isAlive = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
