@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             EndDoorCollision.canSpawn = false;
             DoorManager.canSpawn = false;
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             questionPanel.gameObject.SetActive(false);
             DoorManager.canSpawn = false;
