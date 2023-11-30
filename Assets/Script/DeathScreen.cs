@@ -28,6 +28,7 @@ public class DeathScreen : MonoBehaviour
             pauseMenu.SetActive(false);
             deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             setHighScore();
             highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
             if (!hasTriggeredOnce)
