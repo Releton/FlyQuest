@@ -59,7 +59,7 @@
         new Question("78 ÷ 2", new string[] {"39", "34"}, 0 ,0),
         new Question("65 × 3", new string[] {"185", "195"}, 1 ,0),
         new Question("49 × 5", new string[] {"245", "240"}, 0 ,0),
-        new Question("56 ÷ 7", new string[] {"8", "12"}, 1 ,0),
+        new Question("56 ÷ 7", new string[] {"8", "12"}, 0 ,0),
         new Question("89 + 81", new string[] {"160", "170"}, 1 ,0),
         new Question("90 × 9", new string[] {"990", "810"}, 1 ,0),
         new Question("67 − 47", new string[] {"20", "10"}, 0 ,0),
