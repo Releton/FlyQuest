@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fly Quest
+  m_text: FlyQuest
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d6d0ac42ccb8e2f438e69f5c80fb4e64, type: 2}
   m_sharedMaterial: {fileID: -3380332097425998793, guid: d6d0ac42ccb8e2f438e69f5c80fb4e64, type: 2}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
