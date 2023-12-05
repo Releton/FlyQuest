@@ -136,7 +136,17 @@
         new Question("7 - 15", new string[] {"-8", "8"}, 0,0),
         new Question("15 × 2", new string[] {"28", "30"}, 1,0),
         new Question("23 + 9", new string[] {"30", "32"}, 1,0),
-        new Question("9 × 8", new string[] {"63", "72"}, 1,0)
+        new Question("9 × 8", new string[] {"63", "72"}, 1,0),
+        //By Baidik Dutta
+        new Question("6 × 11", new string[] {"66", "6"}, 0 ,0),
+        new Question("81 ÷ 3", new string[] {"35", "27"}, 1 ,0),
+        new Question("121 × 5", new string[] {"605", "12"}, 0 ,0),
+        new Question("25 × 9", new string [] {"225","99"},0,0),
+        new Question("100 × 90", new string[] {"1600", "9000"}, 1,0),
+        new Question("45 − 19", new string[] {"44", "25"}, 1,0),
+        new Question("144 ÷ 12", new string[] {"6", "12"}, 1 ,0),
+        new Question("9²", new string[] {"41", "81"}, 1 ,0),
+        new Question("48 + 17", new string[] {"65", "55"}, 0 ,0)
     };
 
     public static Question[] maMdQ =
@@ -199,8 +209,8 @@
         new Question("3/4 × 16", new string[] {"12", "9"}, 0,1),
         new Question("If x = 8 and y = 4, find x² - y².", new string[] {"33", "48"}, 1,1),
         new Question("√196", new string[] {"12", "14"}, 1,1),
-        new Question("Which is Lesser?", new string[] {"8/13", "5/6"}, 0,1),
-        new Question("Which is Greater?", new string[] {"3/8", "5/18"}, 0,1),
+        new Question("Which is Lesser out of 8/13 and 5/6?", new string[] {"8/13", "5/6"}, 0,1),
+        new Question("Which is Greater out of 3/8 and 5/18?", new string[] {"3/8", "5/18"}, 0,1),
         new Question("19 × 6", new string[] {"106", "114"}, 1,1),
         new Question("6 − 3 × 4 ÷ 2", new string[] {"6", "0"}, 1,1),
         new Question("14 × 9", new string[] {"120", "126"}, 1,1),
@@ -208,20 +218,29 @@
         new Question("4² + 3²", new string[] {"25", "16"}, 0,1),
         new Question("4 + 3 × 5", new string[] {"35", "19"}, 1,1),
         new Question("5! + 2 ^ 0", new string[] {"120", "121"}, 1,1),
-        new Question("Which is Lesser?", new string[] {"16:25", "4:5"}, 0,1),
+        new Question("Which is Lesser out of 16:25 and 4:5?", new string[] {"16:25", "4:5"}, 0,1),
         new Question("6/7 × 14", new string[] {"12", "10"}, 0,1),
         new Question("0·05 × 0·5", new string[] {"0·25", "0·025"}, 1,1),
         new Question("2/3 + 1/6", new string[] {"5/6", "2/3"}, 0,1),
         new Question("23 − 19 × 2", new string[] {"-15", "8"}, 0,1),
         new Question("11 × 9·1", new string[] {"100·1", "108·1"}, 0,1),
-        new Question("Which is Greater?", new string[] {"1:3", "17:33"}, 1,1),
+        new Question("Which is Greater out of 1:3 and 17:33?", new string[] {"1:3", "17:33"}, 1,1),
         new Question("4³", new string[] {"64", "128"}, 0,1),
         new Question("If x = 3, y = 10, find x² - y.", new string[] {"1", "-1"}, 1,1),
         new Question("5/6 × 18", new string[] {"15", "18"}, 0,1),
         new Question("Simplify: 6/7 × 7 + 7", new string[] {"54·98", "13"}, 1,1),
         new Question("15²", new string[] {"225", "275"}, 0,1),
         new Question("Find the sum of first 5 natural numbers.", new string[] {"15","10"}, 0,1),
-        new Question("Find the sum of first 5 whole numbers.", new string[] {"15","10"}, 1,1)
+        new Question("Find the sum of first 5 whole numbers.", new string[] {"15","10"}, 1,1),
+        //By Baidik Dutta
+        new Question("37 × 8", new string[] {"296", "554"}, 0 ,1),
+        new Question("250 × 250", new string[] {"52500", "62500"}, 1 ,1),
+        new Question("560 − 980", new string[] {"-420","420"},0, 1),
+        new Question("980 − 600", new string[] {"380","-380"},0,1),
+        new Question("7 × 18", new string[] {"126", "100"}, 0 ,1),
+        new Question("Find the sum of first 10 natural numbers", new string[] {"55", "39"}, 0 ,1),
+        new Question("6² − 5", new string[] {"26", "31"}, 1 ,1),
+        new Question("85 − 37", new string[] {"67", "48"}, 1 ,1)
     };
 
     public static Question[] maHdQ =
@@ -235,6 +254,29 @@
         new Question("50 ÷ 2 + 80 − 5", new string[] {"e2", "200"}, 0, 2),
         new Question("(318 + 27) ÷ 5", new string[] {"323·4", "69"}, 1, 2),
         new Question("(388 − 33) ÷ 5", new string[] {"71", "381·4"}, 0, 2),
+        new Question("144% of 50 × 2", new string[] {"288", "144"}, 1, 2),
+        new Question("Find x: 3x × 2x = 50 + 4", new string[] {"3", "9"}, 0, 2),
+        //By Swastik Kundu
+        //new Question("6*sin(30) + 6", new string[] {"9", "6"}, 0 ,2),
+        //new Question("39*cot(90)", new string[] {"0", "1"}, 0 ,2),
+        new Question("6788 + 545", new string[] {"7243", "7333"}, 1 ,2),
+        new Question("8962 - 6584", new string[] {"2733", "2378"}, 1 ,2),
+        new Question("9658 ÷ 11", new string[] {"878", "897"}, 0 ,2),
+        new Question("84 × 14", new string[] {"1326", "1176"}, 1 ,2),
+        new Question("8645 + 4655", new string[] {"13300", "12780"}, 0 ,2),
+        new Question("3345 - 658", new string[] {"2456", "2687"}, 1 ,2),
+        new Question("80 × 29", new string[] {"2320", "2265"}, 0 ,2),
+        //new Question("123*cosec(30)", new string[] {"0", "246"}, 1 ,2),
+        new Question("18 × 96", new string[] {"1728", "11358"}, 0 ,2),
+        //new Question("sin(30) + cos(60)", new string[] {"1", "2"}, 0 ,2),
+        //new Question("cosec(60) * sec(30)", new string[] {"1", "0"}, 0 ,2),
+        new Question("5446 + 9347", new string[] {"15788", "14793"}, 1 ,2),
+        new Question("7895 - 5544", new string[] {"2457", "2351"}, 1 ,2),
+        new Question("56 × 13", new string[] {"798", "728"}, 1 ,2),
+        new Question("5932 + 5359 + 265", new string[] {"11556", "11873"}, 0 ,2),
+        new Question("882 × 3", new string[] {"2646", "2566"}, 0 ,2),
+        //new Question("4*cot(45)", new string[] {"8", "4"}, 1 ,2),
+        new Question("8822 - 2298", new string[] {"6654", "6524"}, 1 ,2),
         //By Mrinmoy Rakshit
         new Question("65²", new string[] {"4225", "4765"}, 0,2),
         new Question("If x + 3 = 7/3, find x.", new string[] {"2/3", "-2/3"}, 1,2),
@@ -255,6 +297,10 @@
         new Question("756 ÷ 18", new string[] {"38", "42"}, 1,2),
         new Question("567 + 789", new string[] {"1356", "1357"}, 0,2),
         new Question("Find x: 3x - 16 = 17/3", new string[] {"65", "65/9"}, 1,2),
-        new Question("23 × 18", new string[] {"414", "424"}, 0,2)
+        new Question("23 × 18", new string[] {"414", "424"}, 0,2),
+        //By Baidik Dutta
+        new Question("20% of 8", new string[] {"1·3", "1·6"}, 1 ,2),
+        new Question("47 × 28", new string[] {"420", "1316"}, 1 ,2),
+        new Question("3 × (4 + 7) - 5", new string[] {"21", "28"}, 1 ,2)
     };
 }
