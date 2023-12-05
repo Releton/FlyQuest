@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
             questionPanel.gameObject.SetActive(false);
             DoorManager.canSpawn = false;
             EndDoorCollision.canSpawn = false;
-            player.TeleportToStart();
             isQuestionZoomed = false;
             print("Herer");
             spawnTimer = timeReq;
@@ -96,7 +95,9 @@ public class GameManager : MonoBehaviour
             spawnNumberLocal = 0;
         }
             questionZoomed.text = quest.question;
-            questionPanel.gameObject.SetActive(true);
+        player.TeleportToStart();
+
+        questionPanel.gameObject.SetActive(true);
             player.TeleportToStart();
             isQuestionZoomed = true;
             print("Herer SHH");
