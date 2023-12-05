@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FlyQuest
+  m_text: FloatQuest
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d6d0ac42ccb8e2f438e69f5c80fb4e64, type: 2}
   m_sharedMaterial: {fileID: -3380332097425998793, guid: d6d0ac42ccb8e2f438e69f5c80fb4e64, type: 2}
@@ -851,7 +851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3658390010679197851, guid: 3ab460fd7abf8944da94274a07549b86, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3658390010679197851, guid: 3ab460fd7abf8944da94274a07549b86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1130,7 +1130,7 @@ RectTransform:
   - {fileID: 1628589325}
   - {fileID: 439226379}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
